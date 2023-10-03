@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ivvy4rvbgnay"]
+[gd_scene load_steps=3 format=3 uid="uid://ivvy4rvbgnay"]
 
 [ext_resource type="Script" path="res://scripts/Level.gd" id="1_7mox7"]
 [ext_resource type="Texture2D" uid="uid://d74o23hxaemv" path="res://assets/background.png" id="1_qokhs"]
-[ext_resource type="PackedScene" uid="uid://c751o5tqdylia" path="res://scenes/TetrisBlock.tscn" id="3_v1ysj"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_7mox7")
@@ -11,5 +10,3 @@ script = ExtResource("1_7mox7")
 position = Vector2(576, 320)
 scale = Vector2(0.45025, 0.64)
 texture = ExtResource("1_qokhs")
-
-[node name="TetrisBlocks" parent="." instance=ExtResource("3_v1ysj")]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxtwe2kj5s3s2"]
+
+[ext_resource type="Script" path="res://scripts/TetrisBehaviour.gd" id="1_7pc5n"]
+[ext_resource type="Texture2D" uid="uid://dd31ffiw8l4g4" path="res://assets/TetrisBlock.png.png" id="1_w3i8k"]
+
+[node name="T" type="Node2D"]
+position = Vector2(0, 1)
+script = ExtResource("1_7pc5n")
+
+[node name="TetrisBlock1" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+scale = Vector2(2, 2)
+texture = ExtResource("1_w3i8k")
+
+[node name="TetrisBlock2" type="Sprite2D" parent="."]
+position = Vector2(48, 16)
+scale = Vector2(2, 2)
+texture = ExtResource("1_w3i8k")
+
+[node name="TetrisBlock3" type="Sprite2D" parent="."]
+position = Vector2(80, 16)
+scale = Vector2(2, 2)
+texture = ExtResource("1_w3i8k")
+
+[node name="TetrisBlock4" type="Sprite2D" parent="."]
+position = Vector2(48, 48)
+scale = Vector2(2, 2)
+texture = ExtResource("1_w3i8k")

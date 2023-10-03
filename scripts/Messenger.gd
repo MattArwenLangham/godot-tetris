@@ -1,4 +1,5 @@
 extends Node
 
 
-singal	LEVEL_START()
+signal LEVEL_START()
+signal BLOCKDISPATCHER_DISPATCHBLOCK()
