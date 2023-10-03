@@ -3,3 +3,4 @@ extends Node
 
 signal LEVEL_START()
 signal BLOCKDISPATCHER_DISPATCHBLOCK()
+signal TETRISBEHAVIOUR_FALL()

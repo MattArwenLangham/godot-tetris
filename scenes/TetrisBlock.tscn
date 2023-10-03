@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c751o5tqdylia"]
+[gd_scene load_steps=4 format=3 uid="uid://c751o5tqdylia"]
 
 [ext_resource type="Script" path="res://scripts/TetrisBlockHandler.gd" id="1_k0h2a"]
 [ext_resource type="Script" path="res://scripts/BlockDispatcher.gd" id="2_n0mch"]
-[ext_resource type="Script" path="res://scripts/TetrisBehaviour.gd" id="3_rh4k5"]
 [ext_resource type="Script" path="res://scripts/FallSpeed.gd" id="5_rdq05"]
 
 [node name="TetrisBlocks" type="Node2D"]
@@ -11,11 +10,8 @@ script = ExtResource("1_k0h2a")
 [node name="BlockDispatcher" type="Node" parent="."]
 script = ExtResource("2_n0mch")
 
-[node name="TetrisBehaviour" type="Node2D" parent="."]
-script = ExtResource("3_rh4k5")
-
 [node name="FallSpeed" type="Timer" parent="."]
 autostart = true
 script = ExtResource("5_rdq05")
 
-[connection signal="timeout" from="FallSpeed" to="TetrisBehaviour" method="_on_fall_speed_timeout"]
+[connection signal="timeout" from="FallSpeed" to="FallSpeed" method="_on_timeout"]

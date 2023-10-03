@@ -8,21 +8,20 @@ position = Vector2(0, 1)
 script = ExtResource("1_7pc5n")
 
 [node name="TetrisBlock1" type="Sprite2D" parent="."]
-position = Vector2(16, 16)
 scale = Vector2(2, 2)
 texture = ExtResource("1_w3i8k")
 
 [node name="TetrisBlock2" type="Sprite2D" parent="."]
-position = Vector2(48, 16)
+position = Vector2(32, 0)
 scale = Vector2(2, 2)
 texture = ExtResource("1_w3i8k")
 
 [node name="TetrisBlock3" type="Sprite2D" parent="."]
-position = Vector2(80, 16)
+position = Vector2(64, 0)
 scale = Vector2(2, 2)
 texture = ExtResource("1_w3i8k")
 
 [node name="TetrisBlock4" type="Sprite2D" parent="."]
-position = Vector2(48, 48)
+position = Vector2(32, 32)
 scale = Vector2(2, 2)
 texture = ExtResource("1_w3i8k")
