@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c751o5tqdylia"]
+
+[ext_resource type="Texture2D" uid="uid://dd31ffiw8l4g4" path="res://assets/TetrisBlock.png.png" id="1_er1g4"]
+
+[node name="TetrisBlock" type="Node2D"]
+
+[node name="TetrisBlock" type="Sprite2D" parent="."]
+position = Vector2(500, 500)
+texture = ExtResource("1_er1g4")
+
+[node name="Node2D" type="Node2D" parent="."]
+scale = Vector2(2, 2)
