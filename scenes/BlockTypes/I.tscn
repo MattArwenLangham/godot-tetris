@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/TetrisBehaviour.gd" id="1_4l6vr"]
 [ext_resource type="Texture2D" uid="uid://dd31ffiw8l4g4" path="res://assets/TetrisBlock.png.png" id="1_m54mm"]
 
-[node name="I" type="Node2D"]
+[node name="I" type="Area2D"]
 position = Vector2(-48, 2)
 script = ExtResource("1_4l6vr")
 
@@ -25,3 +25,8 @@ texture = ExtResource("1_m54mm")
 position = Vector2(96, 0)
 scale = Vector2(2, 2)
 texture = ExtResource("1_m54mm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-780.75, 0)
+scale = Vector2(7.96875, 1)
+polygon = PackedVector2Array(96, -16, 112, -16, 112, 16, 96, 16)

@@ -1,59 +1,27 @@
-extends Node2D
+extends Area2D
 
 @onready var is_active = false
-@onready var reached_bottom = false
-@onready var xpos = 500
-@onready var ypos = 0
-@onready var one_movement = 32
+@onready var tile_size = 32
+@onready var inputs = {"Right": Vector2.RIGHT,
+			"Left": Vector2.LEFT,
+			"Down": Vector2.DOWN}
 
 func _ready():
+	position = Vector2(500, 0)
 	is_active = true
-	_update_position()
-	Messenger.TETRISBEHAVIOUR_FALL.connect(move_down)
+	Messenger.TETRISBEHAVIOUR_FALL.connect(fall)
 
-func _input(event):
-	if event is InputEventKey and event.pressed and is_active :
-	#Keys are Left, Right, Down, Drop and Rotate
-		if Input.is_action_pressed("Left"):
-			move_left()
-		elif Input.is_action_pressed("Right"):
-			move_right()
-		elif Input.is_action_pressed("Down"):
-			move_down()
-		elif Input.is_action_pressed("Drop"):
-			drop_block()
-		elif Input.is_action_pressed("Rotate"):
-			rotate_block()
+func _unhandled_input(event):
+	for dir in inputs.keys():
+		if event.is_action_pressed(dir):
+			move(dir)
 
-func move_left():
-	if xpos - one_movement >= Main.xbound_left:
-		xpos -= one_movement
-		_update_position()
+func fall():
+	move("Down")
 
-func move_right():
-	if xpos + one_movement <= Main.xbound_right:
-		xpos += one_movement
-		_update_position()
+func move(dir):
+	position += inputs[dir] * tile_size
 
-func move_down():
-	ypos += one_movement
-	_update_position()
-	_deactivate_if_landed()
+# func drop_block():
 
-func drop_block():
-	ypos = Main.ybound
-	_update_position()
-	is_active = false
-
-func rotate_block():
-	print("Rotated")
-
-func _update_position():
-	self.position = Vector2(xpos, ypos)
-	print(self.position)
-
-func _deactivate_if_landed():
-	if ypos >= Main.ybound:
-		is_active = false
-		Messenger.TETRISBEHAVIOUR_FALL.disconnect(move_down)
-		Messenger.BLOCKDISPATCHER_DISPATCHBLOCK.emit()
+# func rotate_block():
