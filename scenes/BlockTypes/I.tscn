@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dd31ffiw8l4g4" path="res://assets/TetrisBlock.png.png" id="1_m54mm"]
 
 [node name="I" type="Node2D"]
-position = Vector2(1, 2)
+position = Vector2(-48, 2)
 script = ExtResource("1_4l6vr")
 
 [node name="TetrisBlock1" type="Sprite2D" parent="."]

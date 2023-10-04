@@ -41,7 +41,9 @@ func move_down():
 	_deactivate_if_landed()
 
 func drop_block():
-	print("Dropped")
+	ypos = Main.ybound
+	_update_position()
+	is_active = false
 
 func rotate_block():
 	print("Rotated")
